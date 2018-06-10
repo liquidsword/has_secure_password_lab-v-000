@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   private
-  
+
   def require_logged_in
     redirect_to controller: 'sessions', action: 'new' unless user
   end
