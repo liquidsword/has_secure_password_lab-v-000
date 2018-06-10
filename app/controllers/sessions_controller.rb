@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params [:user][:name])
 
     user = user.try(:authenticate, params [:user][:password])
-    return head(:forbidden) unless @user.authenticate(params[:password])
-    session[:user_id] = @user.id
+
+    session[:user_id] = user.id
 
     redirect_to controller: 'welcome', action: 'home'
   end
