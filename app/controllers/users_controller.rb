@@ -3,4 +3,8 @@ class UsersController < Application::Base
 
   end
 
+  def create
+
+  end
+
 end
